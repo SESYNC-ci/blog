@@ -2,7 +2,7 @@
 title: SESYNC Tech Blog
 email: itrequests@sesync.org
 description: "SESYNC Technical Blog"
-baseurl: ""
+baseurl: "http://sesync-ci.github.io/blog"
 url: "http://www.sesync.org"
 twitter_username: sesync
 github_username:  SESYNC-ci
