@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Database Password Protection in R	"
-date:   2014-08-07 14:06:14
+date:   2014-08-15
 categories: database
 author: msmorul
 ---
