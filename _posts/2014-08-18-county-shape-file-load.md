@@ -42,17 +42,18 @@ These steps were done in Ubuntu 14.04 using the stock Postgresql 9.1 and PostGIS
     ALTER ROLE
 
 
-Now, modify your database and enable spatial extensions
+3. Now, modify your database and enable spatial extensions
 
     public_data=# CREATE EXTENSION postgis;
     CREATE EXTENSION
     public_data=# CREATE EXTENSION postgis_topology;
     CREATE EXTENSION
 
-3. Convert your shapfile
+4. Convert your shapfile
+
     $ shp2pgsql -W LATIN1 census/tl_2013_us_county.shp 2013-county > import.sql
 
-4. Load into db
+5. Load into db
 
     $ psql -f import.sql -d public_data
 
