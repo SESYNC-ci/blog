@@ -1,22 +1,21 @@
 ---
 layout: default
 title: Archive
+parmalink: /archive
 ---
 
 <div class="post">
   <h2>{{page.title}}</h2>
-  <ul>
-    {% for post in site.posts %}
-      {% unless post.next %}
-      <h3>{{ post.date | date: '%Y %b' }}</h3>
-      {% else %}
-        {% capture year %}{{ post.date | date: %Y %b'}}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y %b'}}{% endcapture %}
-        {% if year != nyear %}
-          <h3>{{ year }}</h3>
-        {% endif %}
-      {% endunless %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
+  {% for post in site.posts %}
+    {% capture year %}{{ post.date | date: '%Y'}}{% endcapture %}
+    {% unless pyear == year %}
+      {% if pyear %}
+        </ul>
+      <% endif %}
+      <h3>{{ year }}</h3>
+      <ul>
+    {% endunless %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% assign pyear = year %}
+  {% endfor %}
 </div>
