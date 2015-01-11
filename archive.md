@@ -11,7 +11,7 @@ parmalink: /archive
     {% unless pyear == year %}
       {% if pyear %}
         </ul>
-      <% endif %}
+      {% endif %}
       <h3>{{ year }}</h3>
       <ul>
     {% endunless %}

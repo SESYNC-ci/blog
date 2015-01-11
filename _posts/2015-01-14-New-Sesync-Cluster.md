@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "New Scheduled Computing Services"
-date:   2015-01-08
+date:   2015-01-14
 categories: R infrastucture
 author: msmorul
 ---
